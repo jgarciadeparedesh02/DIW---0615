@@ -1,0 +1,531 @@
+<h1 id="tabladecontenidos">Tabla de Contenidos</h1>
+<ol>
+<li><a href="#propiedades-text-shadow-y-box-shadow">Propiedades text-shadow y box-shadow</a></li>
+<li><a href="#propiedad-text-shadow">Propiedad text-shadow</a></li>
+<li><a href="#propiedad-box-shadow">Propiedad box-shadow</a></li>
+<li><a href="#generadores-de-sombras">Generadores de sombras</a></li>
+<li><a href="#ejemplos-del-uso-de-text-shadow-y-box-shadow">Ejemplos del uso de text-shadow y box-shadow</a></li>
+</ol>
+<h1 id="propiedadestextshadowyboxshadow">Propiedades text-shadow y box-shadow</h1>
+<p>Las sombras son un recurso popular en diseño web para dar profundidad y realce a elementos de tu página. En CSS, puedes aplicar sombras a texto y contenedores mediante las propiedades text-shadow y box-shadow.</p>
+<h2 id="propiedadtextshadow">Propiedad text-shadow</h2>
+<p>La propiedad text-shadow se utiliza para aplicar sombras a texto dentro de elementos HTML. Su sintaxis es la siguiente:</p>
+<pre><code class="css language-css">selector {
+  text-shadow: h-shadow v-shadow blur color;
+}
+</code></pre>
+<ul>
+<li><code>h-shadow</code>: La posición horizontal de la sombra.</li>
+<li><code>v-shadow</code>: La posición vertical de la sombra.</li>
+<li><code>blur</code>: La difuminación de la sombra.</li>
+<li><code>color</code>: El color de la sombra.</li>
+</ul>
+<h3 id="ejemplo">Ejemplo</h3>
+<pre><code class="css language-css">h1 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+</code></pre>
+<h2 id="propiedadboxshadow">Propiedad box-shadow</h2>
+<p>La propiedad box-shadow se utiliza para aplicar sombras a contenedores o cajas (como divs). Su sintaxis es la siguiente:</p>
+<pre><code class="css language-css">selector {
+  box-shadow: h-shadow v-shadow blur spread color inset;
+}
+</code></pre>
+<ul>
+<li><code>h-shadow</code>: La posición horizontal de la sombra.</li>
+<li><code>v-shadow</code>: La posición vertical de la sombra.</li>
+<li><code>blur</code>: La difuminación de la sombra.</li>
+<li><code>color</code>: El color de la sombra.</li>
+<li><code>spread</code>: La expansión de la sombra.</li>
+<li><code>inset</code> (opcional): Indica una sombra interna en lugar de una externa.</li>
+</ul>
+<h3 id="ejemplo-1">Ejemplo</h3>
+<pre><code class="css language-css">div {
+  box-shadow: 4px 4px 8px 2px rgba(0, 0, 0, 0.3);
+}
+</code></pre>
+<h2 id="generadoresdesombras">Generadores de sombras</h2>
+<p>Si deseas experimentar con diferentes efectos de sombra, existen generadores de sombra en línea que facilitan la creación de código CSS para tus elementos. Algunos de los generadores populares incluyen:</p>
+<ul>
+<li><a href="https://www.cssmatic.com/box-shadow">CSSmatic Box Shadow Generator</a></li>
+<li><a href="https://www.css3gen.com/box-shadow">CSS3Gen Box Shadow Generator</a></li>
+<li><a href="https://www.cssportal.com/css3-box-shadow-generator/">Box Shadow CSS Generator by CSSPortal</a></li>
+</ul>
+<p>Estos generadores te permiten ajustar fácilmente los valores de las propiedades box-shadow y text-shadow para lograr el efecto deseado en tus elementos HTML sin necesidad de escribir código manualmente.</p>
+<p>En esta sección, exploraremos cómo usar estas propiedades para aplicar sombras a texto y contenedores, y también te presentaremos algunos generadores de sombras en línea que pueden facilitar tu trabajo de diseño web.</p>
+<h1 id="ejemplosdelusodetextshadowyboxshadow">Ejemplos del uso de text-shadow y box-shadow~</h1>
+<h2 id="ejemplo1">Ejemplo 1</h2>
+<pre><code class="html language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      .title {
+        font-size: 48px;
+        text-shadow: 3px 3px 5px #333;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1 class="title"&gt;Efecto de sombra en texto&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="resultadodelaejecucin">Resultado de la ejecución</h3>
+<p><!DOCTYPE html>
+<html>
+<head>
+  </p>
+<style>
+    .title {
+      font-size: 48px;
+      text-shadow: 3px 3px 5px #333;
+    }
+  </style>
+<p></head>
+<body>
+  </p>
+<h1 class="title">Efecto de sombra en texto</h1>
+<p></body>
+</html></p>
+<h2 id="ejemplo2">Ejemplo 2</h2>
+<pre><code class="html language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: #3498db;
+        box-shadow: 5px 5px 10px #888888;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="resultadodelaejecucin-1">Resultado de la ejecución</h3>
+<p><!DOCTYPE html>
+<html>
+<head>
+  </p>
+<style>
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: #3498db;
+      box-shadow: 5px 5px 10px #888888;
+    }
+  </style>
+<p></head>
+<body>
+  </p>
+<div class="box"></div>
+<p></body>
+</html></p><style>/*
+  Copyright (c) 2017 Chris Patuzzo
+  https://twitter.com/chrispatuzzo
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+  */
+  
+  body {
+    font-family: Helvetica, arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: white;
+    padding: 30px;
+    color: #333;
+  }
+  
+  body > *:first-child {
+    margin-top: 0 !important;
+  }
+  
+  body > *:last-child {
+    margin-bottom: 0 !important;
+  }
+  
+  a {
+    color: #4183C4;
+    text-decoration: none;
+  }
+  
+  a.absent {
+    color: #cc0000;
+  }
+  
+  a.anchor {
+    display: block;
+    padding-left: 30px;
+    margin-left: -30px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    margin: 20px 0 10px;
+    padding: 0;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    cursor: text;
+    position: relative;
+  }
+  
+  h2:first-child, h1:first-child, h1:first-child + h2, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  
+  h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+    text-decoration: none;
+  }
+  
+  h1 tt, h1 code {
+    font-size: inherit;
+  }
+  
+  h2 tt, h2 code {
+    font-size: inherit;
+  }
+  
+  h3 tt, h3 code {
+    font-size: inherit;
+  }
+  
+  h4 tt, h4 code {
+    font-size: inherit;
+  }
+  
+  h5 tt, h5 code {
+    font-size: inherit;
+  }
+  
+  h6 tt, h6 code {
+    font-size: inherit;
+  }
+  
+  h1 {
+    font-size: 28px;
+    color: black;
+  }
+  
+  h2 {
+    font-size: 24px;
+    border-bottom: 1px solid #cccccc;
+    color: black;
+  }
+  
+  h3 {
+    font-size: 18px;
+  }
+  
+  h4 {
+    font-size: 16px;
+  }
+  
+  h5 {
+    font-size: 14px;
+  }
+  
+  h6 {
+    color: #777777;
+    font-size: 14px;
+  }
+  
+  p, blockquote, ul, ol, dl, li, table, pre {
+    margin: 15px 0;
+  }
+  
+  hr {
+    border: 0 none;
+    color: #cccccc;
+    height: 4px;
+    padding: 0;
+  }
+  
+  body > h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  
+  body > h1:first-child {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  
+  body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  
+  a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  
+  h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+    margin-top: 0;
+  }
+  
+  li p.first {
+    display: inline-block;
+  }
+  
+  ul, ol {
+    padding-left: 30px;
+  }
+  
+  ul :first-child, ol :first-child {
+    margin-top: 0;
+  }
+  
+  ul :last-child, ol :last-child {
+    margin-bottom: 0;
+  }
+  
+  dl {
+    padding: 0;
+  }
+  
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px;
+  }
+  
+  dl dt:first-child {
+    padding: 0;
+  }
+  
+  dl dt > :first-child {
+    margin-top: 0;
+  }
+  
+  dl dt > :last-child {
+    margin-bottom: 0;
+  }
+  
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px;
+  }
+  
+  dl dd > :first-child {
+    margin-top: 0;
+  }
+  
+  dl dd > :last-child {
+    margin-bottom: 0;
+  }
+  
+  blockquote {
+    border-left: 4px solid #dddddd;
+    padding: 0 15px;
+    color: #777777;
+  }
+  
+  blockquote > :first-child {
+    margin-top: 0;
+  }
+  
+  blockquote > :last-child {
+    margin-bottom: 0;
+  }
+  
+  table {
+    padding: 0;
+  }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+  }
+  
+  table tr:nth-child(2n) {
+    background-color: #f8f8f8;
+  }
+  
+  table tr th {
+    font-weight: bold;
+    border: 1px solid #cccccc;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+  }
+  
+  table tr td {
+    border: 1px solid #cccccc;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+  }
+  
+  table tr th :first-child, table tr td :first-child {
+    margin-top: 0;
+  }
+  
+  table tr th :last-child, table tr td :last-child {
+    margin-bottom: 0;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  span.frame {
+    display: block;
+    overflow: hidden;
+  }
+  
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto;
+  }
+  
+  span.frame span img {
+    display: block;
+    float: left;
+  }
+  
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0;
+  }
+  
+  span.align-center {
+    display: block;
+    overflow: hidden;
+    clear: both;
+  }
+  
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center;
+  }
+  
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  span.align-right {
+    display: block;
+    overflow: hidden;
+    clear: both;
+  }
+  
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right;
+  }
+  
+  span.align-right span img {
+    margin: 0;
+    text-align: right;
+  }
+  
+  span.float-left {
+    display: block;
+    margin-right: 13px;
+    overflow: hidden;
+    float: left;
+  }
+  
+  span.float-left span {
+    margin: 13px 0 0;
+  }
+  
+  span.float-right {
+    display: block;
+    margin-left: 13px;
+    overflow: hidden;
+    float: right;
+  }
+  
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right;
+  }
+  
+  code, tt {
+    margin: 0 2px;
+    padding: 0 5px;
+    white-space: nowrap;
+    border: 1px solid #eaeaea;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+  }
+  
+  pre code {
+    margin: 0;
+    padding: 0;
+    white-space: pre;
+    border: none;
+    background: transparent;
+  }
+  
+  .highlight pre {
+    background-color: #f8f8f8;
+    border: 1px solid #cccccc;
+    font-size: 13px;
+    line-height: 19px;
+    overflow: auto;
+    padding: 6px 10px;
+    border-radius: 3px;
+  }
+  
+  pre {
+    background-color: #f8f8f8;
+    border: 1px solid #cccccc;
+    font-size: 13px;
+    line-height: 19px;
+    overflow: auto;
+    padding: 6px 10px;
+    border-radius: 3px;
+  }
+  
+  pre code, pre tt {
+    background-color: transparent;
+    border: none;
+  }</style>
