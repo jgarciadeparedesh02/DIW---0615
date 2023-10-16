@@ -129,17 +129,14 @@ En esta sección, hemos explorado las propiedades de filtros en CSS y cómo se p
 ### Resultado de ejecución
 
 <svg fill="none" viewBox="0 0 600 300" width="600" height="300" xmlns="http://www.w3.org/2000/svg">
-<html>
-  <head>
+  <foreignObject width="100%" height="100%">
+      <div xmlns="http://www.w3.org/1999/xhtml">
     <style>
       .imagen-ajustada {
         filter: brightness(150%) contrast(200%);
       }
     </style>
-  </head>
-  <body>
     <img src="./imgs/img1.jfif" alt="Imagen Ajustada" class="imagen-ajustada" />
-  </body>
-</html>
+</div>
   </foreignObject>
 </svg>
