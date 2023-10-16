@@ -5,7 +5,7 @@
    1. [Ejemplo 1: Calculando el ancho de un elemento en porcentaje](#ejemplo-1-calculando-el-ancho-de-un-elemento-en-porcentaje)
    2. [Ejemplo 2: Calculando el alto de un elemento en viewport units](#ejemplo-2-calculando-el-alto-de-un-elemento-en-viewport-units)
    3. [Ejemplo 3: Calculando el margen derecho en función de una variable](#ejemplo-3-calculando-el-margen-derecho-en-función-de-una-variable)
-   5. [Ejemplo 4: Personalizando la barra de navegación con calc](#ejemplo-4-personalizando-la-barra-de-navegación-con-calc)
+   4. [Ejemplo 4: Personalizando la barra de navegación con calc](#ejemplo-4-personalizando-la-barra-de-navegación-con-calc)
 
 # Funciones Matemáticas en CSS
 

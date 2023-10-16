@@ -392,25 +392,31 @@ En este caso, se utiliza la imagen 'custom-cursor.png' como cursor personalizado
 ## Ejemplos de uso
 
 ### Cambio del cursor al pasar el mouse sobre un enlace
+
 ```css
 a:hover {
   cursor: pointer;
 }
 ```
+
 Este CSS cambia el cursor a un dedo apuntando cuando el mouse se coloca sobre un enlace (a).
 
 ### Cambio del cursor en una barra de desplazamiento personalizada
+
 ```css
 .scrollable {
   cursor: url("custom-scroll-cursor.png"), pointer;
 }
 ```
+
 Este CSS cambia el cursor a una imagen personalizada cuando el mouse se coloca sobre un elemento con la clase .scrollable, como una barra de desplazamiento.
 
 ### Indicación de acción no permitida
+
 ```css
 .disabled-button {
   cursor: not-allowed;
 }
 ```
+
 Este CSS cambia el cursor a un círculo con una barra diagonal cuando el mouse se coloca sobre un botón deshabilitado con la clase .disabled-button, indicando que la acción no está permitida.

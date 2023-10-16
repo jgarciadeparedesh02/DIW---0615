@@ -1,4 +1,5 @@
 # Tabla de contenidos
+
 - [Gradientes en CSS: gradiente lineal y radial](#gradientes-en-css-gradiente-lineal-y-radial)
   - [1. Gradiente Lineal](#1-gradiente-lineal)
   - [2. Gradiente Radial](#2-gradiente-radial)
@@ -74,4 +75,5 @@ Estos generadores te permiten personalizar fácilmente los gradientes y obtener 
 Los gradientes también pueden ser utilizados para crear patrones y texturas interesantes. Al superponer gradientes y ajustar los colores y direcciones, puedes lograr efectos visuales llamativos en tus elementos HTML.
 
 Algunas herramientas populares son las siguientes:
+
 - [CSS3Patterns](https://projects.verou.me/css3patterns/)

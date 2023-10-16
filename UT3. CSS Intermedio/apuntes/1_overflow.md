@@ -1,3 +1,11 @@
+# Índice
+
+- [Propiedad CSS `overflow` - Manejo del Excedente de Contenido](#propiedad-css-overflow---manejo-del-excedente-de-contenido)
+  - [Valores de la Propiedad `overflow`](#valores-de-la-propiedad-overflow)
+  - [Casos de Uso Comunes](#casos-de-uso-comunes)
+  - [Ejemplo de Uso](#ejemplo-de-uso)
+    - [Ejemplo 1: Contenedor de Comentarios](#ejemplo-1-contenedor-de-comentarios)
+
 # Propiedad CSS `overflow` - Manejo del Excedente de Contenido
 
 La propiedad `overflow` en CSS se utiliza para controlar el manejo del contenido que se desborda o excede el espacio asignado a un elemento. Esta propiedad es especialmente útil cuando deseas controlar cómo se visualiza o se oculta el contenido que no cabe dentro de un contenedor.

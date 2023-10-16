@@ -1,4 +1,5 @@
 # Tabla de Contenidos
+
 1. [Botones CSS](#botones-css)
 2. [Cómo crear botones de tipo alert](#cómo-crear-botones-de-tipo-alert)
    1. [Ejemplo 1](#ejemplo-1)
@@ -10,7 +11,6 @@
    1. [Ejemplo 1](#ejemplo-1-3)
 6. [Cómo crear migas de pan con CSS](#cómo-crear-migas-de-pan-con-css)
    1. [Ejemplo](#ejemplo-2)
-
 
 # Botones CSS
 
@@ -206,52 +206,54 @@ En este ejemplo, hemos creado un botón que se extiende al 100% del ancho del co
 La creación de un sistema de paginación con CSS es esencial para organizar contenido extenso en múltiples páginas. A continuación, te mostramos cómo puedes hacerlo:
 
 ### Ejemplo 1
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
-        .pagination {
-            display: inline-block;
-        }
-        .pagination a {
-            color: #333;
-            float: left;
-            padding: 8px 16px;
-            text-decoration: none;
-        }
-        .pagination a.active {
-            background-color: #333;
-            color: white;
-        }
-        .pagination a:hover {
-            background-color: #ddd;
-        }
-        .pagination a:first-child {
-            border-radius: 5px 0 0 5px;
-        }
-        .pagination a:last-child {
-            border-radius: 0 5px 5px 0;
-        }
+      .pagination {
+        display: inline-block;
+      }
+      .pagination a {
+        color: #333;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+      }
+      .pagination a.active {
+        background-color: #333;
+        color: white;
+      }
+      .pagination a:hover {
+        background-color: #ddd;
+      }
+      .pagination a:first-child {
+        border-radius: 5px 0 0 5px;
+      }
+      .pagination a:last-child {
+        border-radius: 0 5px 5px 0;
+      }
     </style>
     <title>Paginado con CSS</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="pagination">
-        <a href="#">&laquo;</a>
-        <a href="#" class="active">1</a>
-        <a href="#">2</a>
-        <a href="#">3</a>
-        <a href="#">4</a>
-        <a href="#">&raquo;</a>
+      <a href="#">&laquo;</a>
+      <a href="#" class="active">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">4</a>
+      <a href="#">&raquo;</a>
     </div>
-</body>
+  </body>
 </html>
 ```
 
-#### Resultado de la ejecución 
+#### Resultado de la ejecución
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -299,48 +301,50 @@ La creación de un sistema de paginación con CSS es esencial para organizar con
 
 Las migas de pan son útiles para indicar la ubicación de un usuario en un sitio web. Aquí tienes un ejemplo de cómo crearlas:
 
-### Ejemplo 
-```html 
+### Ejemplo
+
+```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Migas de pan con CSS</title>
     <style>
-        .breadcrumb {
-            font-size: 16px;
-            margin: 20px 0;
-        }
+      .breadcrumb {
+        font-size: 16px;
+        margin: 20px 0;
+      }
 
-        .breadcrumb a {
-            text-decoration: none;
-            color: #333;
-        }
+      .breadcrumb a {
+        text-decoration: none;
+        color: #333;
+      }
 
-        .breadcrumb a:hover {
-            text-decoration: underline;
-        }
+      .breadcrumb a:hover {
+        text-decoration: underline;
+      }
 
-        .breadcrumb span {
-            color: #777;
-            margin: 0 5px;
-        }
+      .breadcrumb span {
+        color: #777;
+        margin: 0 5px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="breadcrumb">
-        <a href="#">Inicio</a>
-        <span> > </span>
-        <a href="#">Categoría</a>
-        <span> > </span>
-        <span>Página Actual</span>
+      <a href="#">Inicio</a>
+      <span> > </span>
+      <a href="#">Categoría</a>
+      <span> > </span>
+      <span>Página Actual</span>
     </div>
-</body>
+  </body>
 </html>
 ```
 
-#### Resultado de la ejecución 
+#### Resultado de la ejecución
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

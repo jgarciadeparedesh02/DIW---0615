@@ -1,4 +1,5 @@
 # Tabla de Contenidos
+
 - [Filtros en CSS para Aplicar Efectos en Imágenes](#filtros-en-css-para-aplicar-efectos-en-imágenes)
   - [Propiedades de Filtros en CSS](#propiedades-de-filtros-en-css)
   - [Combinación de Filtros](#combinación-de-filtros)
@@ -6,7 +7,6 @@
 - [Ejemplos de utilización](#ejemplos-de-utilización)
   - [Ejemplo 1: Aplicar Filtro de Desenfoque (Blur) en una Imagen](#ejemplo-1-aplicar-filtro-de-desenfoque-blur-en-una-imagen)
   - [Ejemplo 2: Ajustar el Brillo y Contraste de una Imagen](#ejemplo-2-ajustar-el-brillo-y-contraste-de-una-imagen)
-
 
 # Filtros en CSS para Aplicar Efectos en Imágenes
 
@@ -69,7 +69,9 @@ Estos generadores te permiten ajustar fácilmente los valores de los filtros y o
 En esta sección, hemos explorado las propiedades de filtros en CSS y cómo se pueden utilizar para aplicar efectos visuales a tus imágenes. Los filtros ofrecen una forma creativa de personalizar la apariencia de tus elementos visuales y mejorar la experiencia del usuario en tu sitio web.
 
 # Ejemplos de utilización
+
 ## Ejemplo 1: Aplicar Filtro de Desenfoque (Blur) en una Imagen
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -81,11 +83,17 @@ En esta sección, hemos explorado las propiedades de filtros en CSS y cómo se p
     </style>
   </head>
   <body>
-    <img src="./imgs/img1.jfif" alt="Imagen Desenfocada" class="imagen-desenfocada" />
+    <img
+      src="./imgs/img1.jfif"
+      alt="Imagen Desenfocada"
+      class="imagen-desenfocada"
+    />
   </body>
 </html>
 ```
+
 ### Resultado de ejecución
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -101,6 +109,7 @@ En esta sección, hemos explorado las propiedades de filtros en CSS y cómo se p
 </html>
 
 ## Ejemplo 2: Ajustar el Brillo y Contraste de una Imagen
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -116,7 +125,9 @@ En esta sección, hemos explorado las propiedades de filtros en CSS y cómo se p
   </body>
 </html>
 ```
+
 ### Resultado de ejecución
+
 <!DOCTYPE html>
 <html>
   <head>
