@@ -128,7 +128,7 @@ En esta sección, hemos explorado las propiedades de filtros en CSS y cómo se p
 
 ### Resultado de ejecución
 
-<!DOCTYPE html>
+<svg fill="none" viewBox="0 0 600 300" width="600" height="300" xmlns="http://www.w3.org/2000/svg">
 <html>
   <head>
     <style>
@@ -141,3 +141,5 @@ En esta sección, hemos explorado las propiedades de filtros en CSS y cómo se p
     <img src="./imgs/img1.jfif" alt="Imagen Ajustada" class="imagen-ajustada" />
   </body>
 </html>
+  </foreignObject>
+</svg>
