@@ -73,7 +73,6 @@ En esta sección, hemos explorado las propiedades de filtros en CSS y cómo se p
 ## Ejemplo 1: Aplicar Filtro de Desenfoque (Blur) en una Imagen
 
 ```html
-<!DOCTYPE html>
 <html>
   <head>
     <style>
@@ -84,7 +83,7 @@ En esta sección, hemos explorado las propiedades de filtros en CSS y cómo se p
   </head>
   <body>
     <img
-      src="./imgs/img1.jfif"
+      src="./svg/imgs/img1.jfif"
       alt="Imagen Desenfocada"
       class="imagen-desenfocada"
     />
@@ -93,9 +92,11 @@ En esta sección, hemos explorado las propiedades de filtros en CSS y cómo se p
 ```
 
 ### Resultado de ejecución
-
-<!DOCTYPE html>
-<html>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg fill="none" viewBox="0 0 400 400" width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+    <foreignObject width="100%" height="100%">
+        <html>
   <head>
     <style>
       .imagen-desenfocada {
@@ -104,14 +105,14 @@ En esta sección, hemos explorado las propiedades de filtros en CSS y cómo se p
     </style>
   </head>
   <body>
-    <img src="./imgs/img1.jfif" alt="Imagen Desenfocada" class="imagen-desenfocada" />
+    <img src="./svg/imgs/img1.jfif" alt="Imagen Desenfocada" class="imagen-desenfocada" />
   </body>
 </html>
+    </foreignObject>
+</svg>
 
 ## Ejemplo 2: Ajustar el Brillo y Contraste de una Imagen
-
 ```html
-<!DOCTYPE html>
 <html>
   <head>
     <style>
@@ -121,14 +122,21 @@ En esta sección, hemos explorado las propiedades de filtros en CSS y cómo se p
     </style>
   </head>
   <body>
-    <img src="./imgs/img1.jfif" alt="Imagen Ajustada" class="imagen-ajustada" />
+    <img
+      src="./svg/imgs/img1.jfif"
+      alt="Imagen Ajustada"
+      class="imagen-ajustada"
+    />
   </body>
 </html>
 ```
 
 ### Resultado de ejecución
-<!DOCTYPE html>
-<html>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg fill="none" viewBox="0 0 400 400" width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+    <foreignObject width="100%" height="100%">
+        <html>
   <head>
     <style>
       .imagen-ajustada {
@@ -137,6 +145,8 @@ En esta sección, hemos explorado las propiedades de filtros en CSS y cómo se p
     </style>
   </head>
   <body>
-    <img src="./imgs/img1.jfif" alt="Imagen Ajustada" class="imagen-ajustada" />
+    <img src="./svg/imgs/img1.jfif" alt="Imagen Ajustada" class="imagen-ajustada" />
   </body>
 </html>
+    </foreignObject>
+</svg>
