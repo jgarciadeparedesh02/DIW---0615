@@ -28,6 +28,7 @@ La propiedad filter con el valor contrast se utiliza para ajustar el contraste d
 
 ### 4. filter: grayscale(valor);
 
+
 La propiedad filter con el valor grayscale se utiliza para convertir una imagen en escala de grises. Puedes especificar un valor numérico para controlar el grado de conversión a escala de grises.
 
 ### 5. filter: hue-rotate(valor);

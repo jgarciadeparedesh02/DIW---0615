@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .chart {
+            width: 400px;
+            height: 300px;
+            border: 1px solid #ccc;
+            position: relative;
+        }
+
+        .bar {
+            width: 50px;
+            background-color: #3498db;
+            position: absolute;
+            cursor: pointer;
+        }
+
+        .bar:hover {
+            background-color: #2980b9;
+        }
+
+        .bar-60:hover{
+            background-color: #b45e25!important;
+        }
+
+        .details {
+            display: none;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            position: absolute;
+            padding: 5px;
+            border-radius: 5px;
+            z-index: 2;
+        }
+
+        .bar:hover .details, .bar-60:hover .details {
+            display: block;
+        }
+        
+    </style>
+    <title>Gráfico de Barras Interactivo</title>
+</head>
+<body>
+    <div class="chart">
+        <div class="bar" style="height: 40%;" data-value="40">
+            <div class="details">Valor: 40%</div>
+        </div>
+        <div class="bar bar-60" style="height: 60%;margin-left: 50px;background-color: #db7734;" data-value="60">
+            <div class="details">Valor: 60%</div>
+        </div>
+    </div>
+
+    <script>
+        const bars = document.querySelectorAll('.bar');
+
+        bars.forEach(bar => {
+            bar.addEventListener('click', () => {
+                const value = bar.getAttribute('data-value');
+                alert(`Valor: ${value}%`);
+            });
+        });
+    </script>
+</body>
+</html>

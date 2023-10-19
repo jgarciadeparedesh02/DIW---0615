@@ -29,14 +29,14 @@ elemento[atributo="valor"] {
 A continuación, te presentamos algunos ejemplos de cómo puedes utilizar los selectores de atributos en CSS:
 
 | Atributo           | Descripción                                                                  |
-| ------------------ | ---------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| ------------------ | ---------------------------------------------------------------------------- | 
 | [href]             | El atributo href existe en la etiqueta.                                      |
 | [href="#"]         | El atributo href existe y su valor es igual al texto #.                      |
 | [href\*="eniun"]   | El atributo href existe y su valor contiene el texto eniun.                  |
 | [href^="https://"] | El atributo href existe y su valor comienza por https://.                    |
 | [href$=".pdf"]     | El atributo href existe y su valor termina por .pdf (es un enlace a un PDF). |
-| [class~="eniun"]   | El atributo class contiene una lista de valores, que contiene eniun.         |
-| [lang              | ="es"]                                                                       | El atributo lang contiene una lista de valores, donde alguno empieza por es-. |
+| [class="sample"]   | El atributo class contiene una lista de valores, que contiene sample.         |
+| [lang="es"]        | El atributo lang contiene una lista de valores, donde alguno empieza por es-. |
 
 ## Usos Comunes de Selectores de Atributos
 
