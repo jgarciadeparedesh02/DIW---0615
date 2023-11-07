@@ -1,150 +1,203 @@
 <!DOCTYPE html>
-    <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>CSS Grid</title>
-        <style>
-/* From extension vscode.github */
-/*---------------------------------------------------------------------------------------------
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Grid</title>
+  <style>
+    /* From extension vscode.github */
+    /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-.vscode-dark img[src$=\#gh-light-mode-only],
-.vscode-light img[src$=\#gh-dark-mode-only] {
-	display: none;
-}
+    .vscode-dark img[src$=\#gh-light-mode-only],
+    .vscode-light img[src$=\#gh-dark-mode-only] {
+      display: none;
+    }
+  </style>
 
-</style>
-        
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
-<style>
-            body {
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
-                font-size: 14px;
-                line-height: 1.6;
-            }
-        </style>
-        <style>
-.task-list-item {
-    list-style-type: none;
-}
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+  </style>
+  <style>
+    .task-list-item {
+      list-style-type: none;
+    }
 
-.task-list-item-checkbox {
-    margin-left: -20px;
-    vertical-align: middle;
-    pointer-events: none;
-}
-</style>
-        
-    </head>
-    <body class="vscode-body vscode-light">
-        <h1 id="css-grid">CSS Grid</h1>
-<p>Las propiedades de CSS Grid nos permiten ajustar el contenido de la web a una cuadrícula o rejilla configurable por el desarrollador.</p>
-<h2 id="propiedad-display-grid--inline-grid">Propiedad <code>display: [grid | inline-grid]</code></h2>
-<p>Para crear una cuadrícula (<code>grid</code>), es necesario definir la propiedad <code>display</code> en el elemento contenedor y especificar el valor <code>grid</code> o <code>inline-grid</code>.</p>
-<p><strong>Valores:</strong></p>
-<ul>
-<li><code>inline-grid</code>: Cuadrícula en línea con respecto al contenido exterior.</li>
-<li><code>grid</code>: Cuadrícula en bloque con respecto al contenido exterior.</li>
-</ul>
-<h3 id="ejemplo-display-grid">Ejemplo <code>display: grid</code></h3>
-<p class="codepen" data-height="300" data-default-tab="css,result" data-slug-hash="KKJabyG" data-editable="true" data-user="Justo-Garc-a-de-Paredes-Haba" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-  <span>See the Pen <a href="https://codepen.io/Justo-Garc-a-de-Paredes-Haba/pen/KKJabyG">
-  Untitled</a> by Justo García de Paredes Haba (<a href="https://codepen.io/Justo-Garc-a-de-Paredes-Haba">@Justo-Garc-a-de-Paredes-Haba</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
-<h3 id="ejemplo-display-inline-grid">Ejemplo <code>display: inline-grid</code></h3>
-<p class="codepen" data-height="300" data-default-tab="css,result" data-slug-hash="PoVWXEO" data-editable="true" data-user="Justo-Garc-a-de-Paredes-Haba" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-  <span>See the Pen <a href="https://codepen.io/Justo-Garc-a-de-Paredes-Haba/pen/PoVWXEO">
-  UT4.3</a> by Justo García de Paredes Haba (<a href="https://codepen.io/Justo-Garc-a-de-Paredes-Haba">@Justo-Garc-a-de-Paredes-Haba</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
-<p><br>Los valores <code>inline-grid</code> y <code>grid</code> indican cómo se comporta el contenedor con respecto al contenido exterior. Con el valor <code>inline-grid</code>, el contenedor aparece en línea con respecto al contenido exterior. Con el valor <code>grid</code>, el contenedor aparece en bloque con respecto al contenido exterior.</p>
-<h2 id="propiedades-grid-template-columns-y-grid-template-rows">Propiedades <code>grid-template-columns</code> y <code>grid-template-rows</code></h2>
-<p>Las propiedades <code>grid-template-columns</code> y <code>grid-template-rows</code> se utilizan para definir el tamaño y la disposición de las columnas y filas en una cuadrícula.</p>
-<p class="codepen" data-height="300" data-default-tab="css,result" data-slug-hash="vYbgvdx" data-editable="true" data-user="Justo-Garc-a-de-Paredes-Haba" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-  <span>See the Pen <a href="https://codepen.io/Justo-Garc-a-de-Paredes-Haba/pen/vYbgvdx">
-  UT4.4</a> by Justo García de Paredes Haba (<a href="https://codepen.io/Justo-Garc-a-de-Paredes-Haba">@Justo-Garc-a-de-Paredes-Haba</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
-<p><br>En el ejemplo anterior, se define una cuadrícula con tres columnas. La primera columna tendrá un tamaño igual a 1 fracción, la segunda columna tendrá un tamaño igual a 2 fracciones y la tercera columna tendrá un tamaño igual a 1 fracción. Además, se definen dos filas, una con una altura de 100 píxeles y la otra con una altura de 200 píxeles.</p>
-<p>Estas propiedades permiten crear diseños de cuadrícula flexibles y personalizados en CSS.</p>
-<p><strong>Nota:</strong> El valor <code>fr</code> representa una fracción del espacio disponible en la cuadrícula y se utiliza para distribuir el espacio de manera equitativa entre las columnas o filas.</p>
-<h3 id="grid-template-columns"><code>grid-template-columns</code></h3>
-<p>La propiedad <code>grid-template-columns</code> se utiliza para definir el tamaño y la disposición de las columnas en una cuadrícula CSS. Esta propiedad te permite especificar cómo se distribuirá el espacio horizontal en una cuadrícula.</p>
-<ul>
-<li>
-<p>Puedes definir el tamaño de las columnas de varias maneras, incluyendo píxeles, porcentajes o fracciones (<code>fr</code>).</p>
-</li>
-<li>
-<p>Las fracciones (<code>fr</code>) son especialmente útiles para crear diseños flexibles, ya que distribuyen el espacio restante en la cuadrícula de manera proporcional. Por ejemplo, si defines tres columnas con <code>1fr 2fr 1fr</code>, la segunda columna tendrá el doble de ancho que las otras dos.</p>
-</li>
-<li>
-<p>Puedes utilizar palabras clave como <code>auto</code> para dejar que una columna tome su tamaño automáticamente en función de su contenido.</p>
-</li>
-<li>
-<p>También es posible combinar diferentes unidades y valores en una sola declaración, por ejemplo, <code>100px 1fr auto</code>.</p>
-</li>
-</ul>
-<pre><code class="language-css"><span class="hljs-selector-class">.contenedor</span> {
+    .task-list-item-checkbox {
+      margin-left: -20px;
+      vertical-align: middle;
+      pointer-events: none;
+    }
+  </style>
+
+</head>
+
+<body class="vscode-body vscode-light">
+  <h1 id="css-grid">CSS Grid</h1>
+  <p>Las propiedades de CSS Grid nos permiten ajustar el contenido de la web a una cuadrícula o rejilla configurable por
+    el desarrollador.</p>
+  <h2 id="propiedad-display-grid--inline-grid">Propiedad <code>display: [grid | inline-grid]</code></h2>
+  <p>Para crear una cuadrícula (<code>grid</code>), es necesario definir la propiedad <code>display</code> en el
+    elemento contenedor y especificar el valor <code>grid</code> o <code>inline-grid</code>.</p>
+  <p><strong>Valores:</strong></p>
+  <ul>
+    <li><code>inline-grid</code>: Cuadrícula en línea con respecto al contenido exterior.</li>
+    <li><code>grid</code>: Cuadrícula en bloque con respecto al contenido exterior.</li>
+  </ul>
+  <h3 id="ejemplo-display-grid">Ejemplo <code>display: grid</code></h3>
+  <p class="codepen" data-height="300" data-default-tab="css,result" data-slug-hash="KKJabyG" data-editable="true"
+    data-user="Justo-Garc-a-de-Paredes-Haba"
+    style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+    <span>See the Pen <a href="https://codepen.io/Justo-Garc-a-de-Paredes-Haba/pen/KKJabyG">
+        Untitled</a> by Justo García de Paredes Haba (<a
+        href="https://codepen.io/Justo-Garc-a-de-Paredes-Haba">@Justo-Garc-a-de-Paredes-Haba</a>)
+      on <a href="https://codepen.io">CodePen</a>.</span>
+  </p>
+  <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+  <h3 id="ejemplo-display-inline-grid">Ejemplo <code>display: inline-grid</code></h3>
+  <p class="codepen" data-height="300" data-default-tab="css,result" data-slug-hash="PoVWXEO" data-editable="true"
+    data-user="Justo-Garc-a-de-Paredes-Haba"
+    style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+    <span>See the Pen <a href="https://codepen.io/Justo-Garc-a-de-Paredes-Haba/pen/PoVWXEO">
+        UT4.3</a> by Justo García de Paredes Haba (<a
+        href="https://codepen.io/Justo-Garc-a-de-Paredes-Haba">@Justo-Garc-a-de-Paredes-Haba</a>)
+      on <a href="https://codepen.io">CodePen</a>.</span>
+  </p>
+  <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+  <p><br>Los valores <code>inline-grid</code> y <code>grid</code> indican cómo se comporta el contenedor con respecto al
+    contenido exterior. Con el valor <code>inline-grid</code>, el contenedor aparece en línea con respecto al contenido
+    exterior. Con el valor <code>grid</code>, el contenedor aparece en bloque con respecto al contenido exterior.</p>
+  <h2 id="propiedades-grid-template-columns-y-grid-template-rows">Propiedades <code>grid-template-columns</code> y
+    <code>grid-template-rows</code></h2>
+  <p>Las propiedades <code>grid-template-columns</code> y <code>grid-template-rows</code> se utilizan para definir el
+    tamaño y la disposición de las columnas y filas en una cuadrícula.</p>
+  <p class="codepen" data-height="300" data-default-tab="css,result" data-slug-hash="vYbgvdx" data-editable="true"
+    data-user="Justo-Garc-a-de-Paredes-Haba"
+    style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+    <span>See the Pen <a href="https://codepen.io/Justo-Garc-a-de-Paredes-Haba/pen/vYbgvdx">
+        UT4.4</a> by Justo García de Paredes Haba (<a
+        href="https://codepen.io/Justo-Garc-a-de-Paredes-Haba">@Justo-Garc-a-de-Paredes-Haba</a>)
+      on <a href="https://codepen.io">CodePen</a>.</span>
+  </p>
+  <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+  <p><br>En el ejemplo anterior, se define una cuadrícula con tres columnas. La primera columna tendrá un tamaño igual a
+    1 fracción, la segunda columna tendrá un tamaño igual a 2 fracciones y la tercera columna tendrá un tamaño igual a 1
+    fracción. Además, se definen dos filas, una con una altura de 100 píxeles y la otra con una altura de 200 píxeles.
+  </p>
+  <p>Estas propiedades permiten crear diseños de cuadrícula flexibles y personalizados en CSS.</p>
+  <p><strong>Nota:</strong> El valor <code>fr</code> representa una fracción del espacio disponible en la cuadrícula y
+    se utiliza para distribuir el espacio de manera equitativa entre las columnas o filas.</p>
+  <h3 id="grid-template-columns"><code>grid-template-columns</code></h3>
+  <p>La propiedad <code>grid-template-columns</code> se utiliza para definir el tamaño y la disposición de las columnas
+    en una cuadrícula CSS. Esta propiedad te permite especificar cómo se distribuirá el espacio horizontal en una
+    cuadrícula.</p>
+  <ul>
+    <li>
+      <p>Puedes definir el tamaño de las columnas de varias maneras, incluyendo píxeles, porcentajes o fracciones
+        (<code>fr</code>).</p>
+    </li>
+    <li>
+      <p>Las fracciones (<code>fr</code>) son especialmente útiles para crear diseños flexibles, ya que distribuyen el
+        espacio restante en la cuadrícula de manera proporcional. Por ejemplo, si defines tres columnas con
+        <code>1fr 2fr 1fr</code>, la segunda columna tendrá el doble de ancho que las otras dos.</p>
+    </li>
+    <li>
+      <p>Puedes utilizar palabras clave como <code>auto</code> para dejar que una columna tome su tamaño automáticamente
+        en función de su contenido.</p>
+    </li>
+    <li>
+      <p>También es posible combinar diferentes unidades y valores en una sola declaración, por ejemplo,
+        <code>100px 1fr auto</code>.</p>
+    </li>
+  </ul>
+  <pre><code class="language-css"><span class="hljs-selector-class">.contenedor</span> {
   <span class="hljs-attribute">display</span>: grid;
   <span class="hljs-attribute">grid-template-columns</span>: <span class="hljs-number">1</span>fr <span class="hljs-number">2</span>fr <span class="hljs-number">1</span>fr;
 }
 </code></pre>
-<h3 id="grid-template-rows"><code>grid-template-rows</code></h3>
-<p>La propiedad <code>grid-template-rows</code> se utiliza de manera similar a <code>grid-template-columns</code>, pero para definir el tamaño y la disposición de las filas en una cuadrícula CSS. Te permite especificar cómo se distribuirá el espacio vertical en la cuadrícula.</p>
-<ul>
-<li>
-<p>Al igual que en <code>grid-template-columns</code>, puedes definir el tamaño de las filas utilizando píxeles, porcentajes o fracciones (<code>fr</code>).</p>
-</li>
-<li>
-<p>Las fracciones (<code>fr</code>) son útiles para crear diseños flexibles en el eje vertical, al igual que en el eje horizontal.</p>
-</li>
-<li>
-<p>Puedes usar palabras clave como <code>auto</code> para que una fila tome su tamaño automáticamente según su contenido.</p>
-</li>
-<li>
-<p>También puedes combinar diferentes unidades y valores en una sola declaración, como <code>100px 1fr auto</code>.</p>
-</li>
-</ul>
-<p>Ejemplo de uso:</p>
-<pre><code class="language-css"><span class="hljs-selector-class">.contenedor</span> {
+  <h3 id="grid-template-rows"><code>grid-template-rows</code></h3>
+  <p>La propiedad <code>grid-template-rows</code> se utiliza de manera similar a <code>grid-template-columns</code>,
+    pero para definir el tamaño y la disposición de las filas en una cuadrícula CSS. Te permite especificar cómo se
+    distribuirá el espacio vertical en la cuadrícula.</p>
+  <ul>
+    <li>
+      <p>Al igual que en <code>grid-template-columns</code>, puedes definir el tamaño de las filas utilizando píxeles,
+        porcentajes o fracciones (<code>fr</code>).</p>
+    </li>
+    <li>
+      <p>Las fracciones (<code>fr</code>) son útiles para crear diseños flexibles en el eje vertical, al igual que en el
+        eje horizontal.</p>
+    </li>
+    <li>
+      <p>Puedes usar palabras clave como <code>auto</code> para que una fila tome su tamaño automáticamente según su
+        contenido.</p>
+    </li>
+    <li>
+      <p>También puedes combinar diferentes unidades y valores en una sola declaración, como
+        <code>100px 1fr auto</code>.</p>
+    </li>
+  </ul>
+  <p>Ejemplo de uso:</p>
+  <pre><code class="language-css"><span class="hljs-selector-class">.contenedor</span> {
   <span class="hljs-attribute">display</span>: grid;
   <span class="hljs-attribute">grid-template-rows</span>: <span class="hljs-number">100px</span> <span class="hljs-number">2</span>fr <span class="hljs-number">1</span>fr;
 }
 </code></pre>
-<h2 id="propiedades-row-gap-y-column-gap">Propiedades <code>row-gap</code> y <code>column-gap</code></h2>
-<p>Las propiedades <code>row-gap</code> y <code>column-gap</code> son propiedades relacionadas con la disposición de elementos en una cuadrícula CSS. Estas propiedades permiten controlar el espacio vertical (entre filas) y horizontal (entre columnas) en una cuadrícula, respectivamente.</p>
-<h3 id="row-gap"><code>row-gap</code></h3>
-<p>La propiedad <code>row-gap</code> se utiliza para especificar la distancia entre las filas en una cuadrícula. Puedes definir el valor de <code>row-gap</code> en píxeles, porcentajes u otras unidades de longitud. Esta propiedad es especialmente útil para crear un espaciado uniforme entre filas en un diseño de cuadrícula.</p>
-<p>Ejemplo de uso:</p>
-<p class="codepen" data-height="300" data-default-tab="css,result" data-slug-hash="rNPjoJE" data-editable="true" data-user="Justo-Garc-a-de-Paredes-Haba" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-  <span>See the Pen <a href="https://codepen.io/Justo-Garc-a-de-Paredes-Haba/pen/rNPjoJE">
-  UT4.5</a> by Justo García de Paredes Haba (<a href="https://codepen.io/Justo-Garc-a-de-Paredes-Haba">@Justo-Garc-a-de-Paredes-Haba</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
-<h3 id="column-gap"><code>column-gap</code></h3>
-<p>La propiedad <code>column-gap</code> se utiliza para especificar la distancia entre las columnas en una cuadrícula. Al igual que <code>row-gap</code>, puedes definir el valor de <code>column-gap</code> en píxeles, porcentajes u otras unidades de longitud. Esta propiedad te permite controlar el espacio horizontal entre las columnas en una cuadrícula.</p>
-<p>Ejemplo de uso:</p>
-<p class="codepen" data-height="300" data-default-tab="css,result" data-slug-hash="YzBNdaN" data-editable="true" data-user="Justo-Garc-a-de-Paredes-Haba" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-  <span>See the Pen <a href="https://codepen.io/Justo-Garc-a-de-Paredes-Haba/pen/YzBNdaN">
-  UT4.6</a> by Justo García de Paredes Haba (<a href="https://codepen.io/Justo-Garc-a-de-Paredes-Haba">@Justo-Garc-a-de-Paredes-Haba</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
-<p><br>Estas propiedades son útiles para ajustar el espaciado entre filas y columnas en una cuadrícula CSS, lo que te permite crear diseños de cuadrícula más flexibles y personalizados.</p>
-<h2 id="propiedad-grid-template-areas">Propiedad <code>grid-template-areas</code></h2>
-<p>La propiedad <code>grid-template-areas</code> es una característica poderosa de CSS Grid que permite definir un diseño de cuadrícula de manera visual y estructurada. Con <code>grid-template-areas</code>, puedes asignar nombres a áreas específicas de una cuadrícula y organizar tu diseño de una manera más legible y mantenible.</p>
-<h3 id="sintaxis">Sintaxis:</h3>
-<p>La propiedad <code>grid-template-areas</code> se define dentro del selector del contenedor de la cuadrícula y utiliza comillas dobles o simples para especificar un nombre para cada área. Las áreas se describen como una cuadrícula de filas y columnas, donde cada celda contiene un nombre correspondiente a un área específica.</p>
-<h3 id="ejemplo">Ejemplo:</h3>
-<pre><code class="language-css"><span class="hljs-selector-class">.contenedor</span> {
+  <h2 id="propiedades-row-gap-y-column-gap">Propiedades <code>row-gap</code> y <code>column-gap</code></h2>
+  <p>Las propiedades <code>row-gap</code> y <code>column-gap</code> son propiedades relacionadas con la disposición de
+    elementos en una cuadrícula CSS. Estas propiedades permiten controlar el espacio vertical (entre filas) y horizontal
+    (entre columnas) en una cuadrícula, respectivamente.</p>
+  <h3 id="row-gap"><code>row-gap</code></h3>
+  <p>La propiedad <code>row-gap</code> se utiliza para especificar la distancia entre las filas en una cuadrícula.
+    Puedes definir el valor de <code>row-gap</code> en píxeles, porcentajes u otras unidades de longitud. Esta propiedad
+    es especialmente útil para crear un espaciado uniforme entre filas en un diseño de cuadrícula.</p>
+  <p>Ejemplo de uso:</p>
+  <p class="codepen" data-height="300" data-default-tab="css,result" data-slug-hash="rNPjoJE" data-editable="true"
+    data-user="Justo-Garc-a-de-Paredes-Haba"
+    style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+    <span>See the Pen <a href="https://codepen.io/Justo-Garc-a-de-Paredes-Haba/pen/rNPjoJE">
+        UT4.5</a> by Justo García de Paredes Haba (<a
+        href="https://codepen.io/Justo-Garc-a-de-Paredes-Haba">@Justo-Garc-a-de-Paredes-Haba</a>)
+      on <a href="https://codepen.io">CodePen</a>.</span>
+  </p>
+  <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+  <h3 id="column-gap"><code>column-gap</code></h3>
+  <p>La propiedad <code>column-gap</code> se utiliza para especificar la distancia entre las columnas en una cuadrícula.
+    Al igual que <code>row-gap</code>, puedes definir el valor de <code>column-gap</code> en píxeles, porcentajes u
+    otras unidades de longitud. Esta propiedad te permite controlar el espacio horizontal entre las columnas en una
+    cuadrícula.</p>
+  <p>Ejemplo de uso:</p>
+  <p class="codepen" data-height="300" data-default-tab="css,result" data-slug-hash="YzBNdaN" data-editable="true"
+    data-user="Justo-Garc-a-de-Paredes-Haba"
+    style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+    <span>See the Pen <a href="https://codepen.io/Justo-Garc-a-de-Paredes-Haba/pen/YzBNdaN">
+        UT4.6</a> by Justo García de Paredes Haba (<a
+        href="https://codepen.io/Justo-Garc-a-de-Paredes-Haba">@Justo-Garc-a-de-Paredes-Haba</a>)
+      on <a href="https://codepen.io">CodePen</a>.</span>
+  </p>
+  <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+  <p><br>Estas propiedades son útiles para ajustar el espaciado entre filas y columnas en una cuadrícula CSS, lo que te
+    permite crear diseños de cuadrícula más flexibles y personalizados.</p>
+  <h2 id="propiedad-grid-template-areas">Propiedad <code>grid-template-areas</code></h2>
+  <p>La propiedad <code>grid-template-areas</code> es una característica poderosa de CSS Grid que permite definir un
+    diseño de cuadrícula de manera visual y estructurada. Con <code>grid-template-areas</code>, puedes asignar nombres a
+    áreas específicas de una cuadrícula y organizar tu diseño de una manera más legible y mantenible.</p>
+  <h3 id="sintaxis">Sintaxis:</h3>
+  <p>La propiedad <code>grid-template-areas</code> se define dentro del selector del contenedor de la cuadrícula y
+    utiliza comillas dobles o simples para especificar un nombre para cada área. Las áreas se describen como una
+    cuadrícula de filas y columnas, donde cada celda contiene un nombre correspondiente a un área específica.</p>
+  <h3 id="ejemplo">Ejemplo:</h3>
+  <pre><code class="language-css"><span class="hljs-selector-class">.contenedor</span> {
   <span class="hljs-attribute">display</span>: grid;
   <span class="hljs-attribute">grid-template-columns</span>: <span class="hljs-number">200px</span> <span class="hljs-number">1</span>fr;
   <span class="hljs-attribute">grid-template-rows</span>: <span class="hljs-number">100px</span> <span class="hljs-number">1</span>fr;
@@ -153,22 +206,32 @@
     <span class="hljs-string">&quot;sidebar main&quot;</span>;
 }
 </code></pre>
-<p>En el ejemplo anterior, hemos definido una cuadrícula con dos columnas y dos filas. La propiedad <code>grid-template-areas</code> asigna nombres a cuatro áreas diferentes: &quot;header&quot;, &quot;sidebar&quot;, &quot;main&quot;, y el área vacía entre ellas. Estas áreas se organizan de manera legible, lo que facilita la comprensión del diseño de la cuadrícula.</p>
-<h3 id="uso">Uso:</h3>
-<ul>
-<li>Puedes asignar el mismo nombre a múltiples celdas si deseas que compartan el mismo área.</li>
-<li>Los puntos (.) se utilizan para indicar áreas vacías o sin nombre.</li>
-<li>Puedes cambiar el diseño de la cuadrícula simplemente reorganizando los nombres de las áreas en la propiedad <code>grid-template-areas</code>.</li>
-</ul>
-<p>La propiedad <code>grid-template-areas</code> es especialmente útil para diseñar páginas web complejas con una estructura clara y organizada. Permite una representación visual de la cuadrícula que es fácil de mantener y modificar.</p>
-<h2 id="ejemplo-de-web">Ejemplo de Web</h2>
-<p class="codepen" data-height="300" data-default-tab="css,result" data-slug-hash="jOdyXEz" data-editable="true" data-user="Justo-Garc-a-de-Paredes-Haba" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-  <span>See the Pen <a href="https://codepen.io/Justo-Garc-a-de-Paredes-Haba/pen/jOdyXEz">
-  Untitled</a> by Justo García de Paredes Haba (<a href="https://codepen.io/Justo-Garc-a-de-Paredes-Haba">@Justo-Garc-a-de-Paredes-Haba</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
-        
-        
-    </body>
-    </html>
+  <p>En el ejemplo anterior, hemos definido una cuadrícula con dos columnas y dos filas. La propiedad
+    <code>grid-template-areas</code> asigna nombres a cuatro áreas diferentes: &quot;header&quot;, &quot;sidebar&quot;,
+    &quot;main&quot;, y el área vacía entre ellas. Estas áreas se organizan de manera legible, lo que facilita la
+    comprensión del diseño de la cuadrícula.</p>
+  <h3 id="uso">Uso:</h3>
+  <ul>
+    <li>Puedes asignar el mismo nombre a múltiples celdas si deseas que compartan el mismo área.</li>
+    <li>Los puntos (.) se utilizan para indicar áreas vacías o sin nombre.</li>
+    <li>Puedes cambiar el diseño de la cuadrícula simplemente reorganizando los nombres de las áreas en la propiedad
+      <code>grid-template-areas</code>.</li>
+  </ul>
+  <p>La propiedad <code>grid-template-areas</code> es especialmente útil para diseñar páginas web complejas con una
+    estructura clara y organizada. Permite una representación visual de la cuadrícula que es fácil de mantener y
+    modificar.</p>
+  <h2 id="ejemplo-de-web">Ejemplo de Web</h2>
+  <p class="codepen" data-height="300" data-default-tab="css,result" data-slug-hash="jOdyXEz" data-editable="true"
+    data-user="Justo-Garc-a-de-Paredes-Haba"
+    style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+    <span>See the Pen <a href="https://codepen.io/Justo-Garc-a-de-Paredes-Haba/pen/jOdyXEz">
+        Untitled</a> by Justo García de Paredes Haba (<a
+        href="https://codepen.io/Justo-Garc-a-de-Paredes-Haba">@Justo-Garc-a-de-Paredes-Haba</a>)
+      on <a href="https://codepen.io">CodePen</a>.</span>
+  </p>
+  <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+
+</body>
+
+</html>
