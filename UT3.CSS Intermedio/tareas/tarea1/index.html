@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            --image-width: 600px;
+            font-family: Arial, sans-serif;
+        }
+
+        .gallery-container {
+            width: var(--image-width);
+            margin: 0 auto;
+        }
+
+        .gallery {
+            display: flex;
+            width: 2000px;
+            transition: transform 0.5s;
+        }
+
+        .image {
+            width: var(--image-width);
+            height: 400px;
+        }
+
+        .thumbnails {
+            display: flex;
+            overflow-x: scroll;
+            justify-content: center;
+        }
+
+        .thumbnail {
+            width: 80px;
+            height: 60px;
+            margin: 5px;
+            transition: transform 0.2s;
+        }
+
+        .thumbnail img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .thumbnail:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Galería de Imágenes</h1>
+
+    <div class="gallery-container">
+        <div class="gallery">
+            <img class="image" src="imagen1.jfif" alt="Imagen 1">
+            <img class="image" src="imagen2.jfif" alt="Imagen 2">
+            <img class="image" src="imagen3.jfif" alt="Imagen 3">
+            <!-- Agrega más imágenes si es necesario -->
+        </div>
+    </div>
+
+    <div class="thumbnails">
+        <div class="thumbnail" onclick="scrollToImage(0)"><img src="imagen1.jfif" alt="Miniatura 1"></div>
+        <div class="thumbnail" onclick="scrollToImage(1)"><img src="imagen2.jfif" alt="Miniatura 2"></div>
+        <div class="thumbnail" onclick="scrollToImage(2)"><img src="imagen3.jfif" alt="Miniatura 3"></div>
+        <!-- Agrega más miniaturas si es necesario -->
+    </div>
+
+    <script>
+        function scrollToImage(imageIndex) {
+            const gallery = document.querySelector('.gallery');
+            const imageWidth = 600; // Ancho de cada imagen
+            gallery.style.transform = `translateX(-${imageIndex * imageWidth}px)`;
+        }
+    </script>
+</body>
+
+</html>

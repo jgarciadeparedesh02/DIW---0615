@@ -1,0 +1,38 @@
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+    }
+
+    .kodfun-galeri {
+        display: flex;
+        height: 20rem;
+        gap: 1rem;
+    }
+
+    .kodfun-galeri>div {
+        flex: 1;
+        border-radius: 1rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        opacity: 0.7;
+        transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
+    }
+
+    .kodfun-galeri>div:hover {
+        flex: 3;
+        cursor: pointer;
+        opacity: 1;
+    }
+</style>
+
+<div class="kodfun-galeri">
+    <div style="background-image: url('kf1.jpg');"></div>
+    <div style="background-image: url('kf2.jpg');"></div>
+    <div style="background-image: url('kf3.jpg');"></div>
+    <div style="background-image: url('kf4.jpg');"></div>
+    <div style="background-image: url('kf5.jpg');"></div>
+</div>

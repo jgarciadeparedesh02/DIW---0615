@@ -1,0 +1,40 @@
+<style>
+  html {
+    height: 100%;
+    background: #223;
+    display: grid;
+    place-items: center;
+  }
+
+  .box {
+    --border-size: 3px;
+    --border-angle: 0deg;
+    width: 60vw;
+    height: 50vh;
+    background-image: conic-gradient(from var(--border-angle), #213, #112 50%, #213),
+      conic-gradient(from var(--border-angle), transparent 20%, #08f, #f03);
+    background-size: calc(100% - (var(--border-size) * 2)) calc(100% - (var(--border-size) * 2)), cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    animation: bg-spin 10s linear infinite;
+    border: 3px ;
+  }
+
+  @keyframes bg-spin {
+    to {
+      --border-angle: 1turn;
+    }
+  }
+
+  .box:hover {
+    animation-play-state: paused;
+  }
+
+  @property --border-angle {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+  }
+</style>
+
+<div class="box"></div>

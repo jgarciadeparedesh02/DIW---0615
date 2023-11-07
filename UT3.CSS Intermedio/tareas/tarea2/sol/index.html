@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Barra de Progreso Animada</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .progress-bar {
+            width: 100%;
+            max-width: 400px;
+            height: 20px;
+            background-color: #f0f0f0;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .progress {
+            width: 0;
+            height: 100%;
+            background-color: #4caf50;
+        }
+
+        @keyframes progressBar {
+            0% {
+                width: 0;
+            }
+
+            100% {
+                width: 100%;
+            }
+        }
+
+        /* Agrega la animación a la barra de progreso */
+        .progress.active {
+            animation: progressBar 5s linear infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="progress-bar">
+        <div class="progress" id="progress"></div>
+    </div>
+    <script>
+        const progressBar = document.getElementById('progress');
+        progressBar.classList.add('active');
+    </script>
+</body>
+
+</html>

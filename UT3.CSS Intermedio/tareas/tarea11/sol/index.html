@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    @property --border-angle {
+      syntax: '<angle>';
+      initial-value: 0deg;
+      inherits: false;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #160020;
+    }
+
+    .background {
+      height: 410px;
+      width: 710px;
+      background-image: conic-gradient(from var(--border-angle), transparent 20%, #08f, #f03);
+      animation: background 3s linear infinite;
+    }
+
+    .box {
+      position: absolute;
+      height: 400px;
+      width: 700px;
+      background-image: conic-gradient(from var(--border-angle), #213, #112 50%, #213);
+      animation: background 3s linear infinite;
+    }
+
+    .box:hover,
+    .background:hover {
+      animation-play-state: paused;
+    }
+
+
+
+    @keyframes background {
+      0% {
+        --border-angle: 0deg;
+      }
+
+      100% {
+        --border-angle: 360deg;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="background">
+  </div>
+  <div class="box"></div>
+</body>
+
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+
+    html,
+    body {
+      min-height: 100%;
+    }
+
+    body {
+      background-color: #00a99e;
+    }
+
+    .clock {
+      position: relative;
+      height: 200px;
+      width: 200px;
+      background: white;
+      box-sizing: border-box;
+      border-radius: 100%;
+      border: 10px solid #67d2c8;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+
+    .clock .top {
+      position: absolute;
+      width: 3px;
+      height: 8px;
+      background: #262626;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+
+    .clock .right {
+      position: absolute;
+      width: 8px;
+      height: 3px;
+      background: #262626;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto 0;
+    }
+
+    .clock .bottom {
+      position: absolute;
+      width: 3px;
+      height: 8px;
+      background: #262626;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: 0 auto;
+    }
+
+    .clock .left {
+      position: absolute;
+      width: 8px;
+      height: 3px;
+      background: #262626;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto 0;
+    }
+
+    .clock .center {
+      height: 6px;
+      width: 6px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      background: #262626;
+      border-radius: 100%;
+    }
+
+    .clock .shadow {
+      height: 200px;
+      width: 200px;
+      position: absolute;
+      left: 60px;
+      top: 60px;
+      transform: rotate(135deg);
+      background: linear-gradient(transparent, rgba(0, 0, 0, 0.1));
+    }
+
+    .clock .hour {
+      width: 3px;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+
+    .clock .hour:before {
+      position: absolute;
+      content: "";
+      background: #262626;
+      height: 60px;
+      width: 3px;
+      top: 30px;
+    }
+
+    .clock .minute {
+      width: 1px;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+
+    .clock .minute:before {
+      position: absolute;
+      content: "";
+      background: #262626;
+      height: 40px;
+      width: 1px;
+      top: 50px;
+    }
+
+    .clock .second {
+      width: 2px;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+
+    .clock .second:before {
+      position: absolute;
+      content: "";
+      background: #fd1111;
+      height: 45px;
+      width: 2px;
+      top: 45px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="clock">
+    <div class="top"></div>
+    <div class="right"></div>
+    <div class="bottom"></div>
+    <div class="left"></div>
+    <div class="center"></div>
+    <div class="shadow"></div>
+    <div class="hour"></div>
+    <div class="minute"></div>
+    <div class="second"></div>
+  </div>
+
+  <script>
+    function updateClock() {
+      const now = new Date();
+      const hours = now.getHours() % 12;
+      const minutes = now.getMinutes();
+      const seconds = now.getSeconds();
+
+      const hourDeg = (360 / 12) * hours + (360 / 12) * (minutes / 60);
+      const minuteDeg = (360 / 60) * minutes + (360 / 60) * (seconds / 60);
+      const secondDeg = (360 / 60) * seconds;
+
+      const hourHand = document.querySelector('.hour');
+      const minuteHand = document.querySelector('.minute');
+      const secondHand = document.querySelector('.second');
+
+      hourHand.style.transform = `rotate(${hourDeg}deg)`;
+      minuteHand.style.transform = `rotate(${minuteDeg}deg)`;
+      secondHand.style.transform = `rotate(${secondDeg}deg)`;
+    }
+
+    updateClock(); 
+    </script>
+</body>
+
+</html>
