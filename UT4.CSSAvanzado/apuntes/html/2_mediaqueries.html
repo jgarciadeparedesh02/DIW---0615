@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Contenidos</title>
+        <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h1 id="contenidos">Contenidos</h1>
+<ul>
+<li><a href="#contenidos">Contenidos</a></li>
+<li><a href="#media-queries-en-css">Media Queries en CSS</a>
+<ul>
+<li><a href="#sintaxis-b%C3%A1sica">Sintaxis Básica</a>
+<ul>
+<li><a href="#tipo_de_medio"><code>tipo_de_medio</code></a>
+<ul>
+<li><a href="#1-all">1. <code>all</code></a></li>
+<li><a href="#2-screen">2. <code>screen</code></a></li>
+<li><a href="#3-print">3. <code>print</code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#ejemplos-b%C3%A1sicos">Ejemplos básicos</a>
+<ul>
+<li><a href="#cambiar-estilos-para-pantallas-peque%C3%B1as">Cambiar estilos para pantallas pequeñas</a></li>
+<li><a href="#estilos-espec%C3%ADficos-para-impresi%C3%B3n">Estilos específicos para impresión</a></li>
+<li><a href="#orientaci%C3%B3n-del-dispositivo">Orientación del dispositivo</a></li>
+</ul>
+</li>
+<li><a href="#breakpoints">Breakpoints</a>
+<ul>
+<li><a href="#ejemplos-de-breakpoints-en-media-queries">Ejemplos de Breakpoints en Media Queries</a></li>
+<li><a href="#breakpoints-populares">Breakpoints populares</a></li>
+</ul>
+</li>
+<li><a href="#otros-ejemplos-de-media-queries-menos-utilizados">Otros ejemplos de media queries menos utilizados</a></li>
+</ul>
+</li>
+<li><a href="#ejemplos-de-la-utilizaci%C3%B3n-de-media-queries">Ejemplos de la utilización de media queries</a>
+<ul>
+<li><a href="#ejemplo-de-navbar-que-muestra-men%C3%BA-hamburguesa-o-men%C3%BA-completo">Ejemplo de navbar que muestra menú hamburguesa o menú completo</a></li>
+<li><a href="#ejemplo-de-cambio-de-animaci%C3%B3n-con-resoluci%C3%B3n">Ejemplo de cambio de animación con resolución</a></li>
+<li><a href="#ejemplo-de-cambio-de-organizaci%C3%B3n-en-la-p%C3%A1gina">Ejemplo de cambio de organización en la página</a></li>
+<li><a href="#ejemplo-de-cambio-de-estructura-de-producto">Ejemplo de cambio de estructura de producto</a></li>
+<li><a href="#ejemplo-de-cambio-en-p%C3%A1gina-de-restaurante">Ejemplo de cambio en página de restaurante</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="media-queries-en-css">Media Queries en CSS</h1>
+<p>Las media queries son una herramienta esencial en el diseño web <code>responsive</code>, permitiendo adaptar estilos según las características del dispositivo. Estas consultas condicionales se aplican mediante reglas de estilo CSS y son cruciales para crear experiencias de usuario coherentes en diversos dispositivos.</p>
+<h2 id="sintaxis-básica">Sintaxis Básica</h2>
+<p>Las media queries se incorporan en bloques de código CSS y siguen la siguiente sintaxis:</p>
+<pre><code class="language-css"><span class="hljs-keyword">@media</span> tipo_de_medio y (condición) {
+  <span class="hljs-comment">/* Estilos a aplicar si se cumple la condición */</span>
+}
+</code></pre>
+<ul>
+<li>
+<p><strong><code>tipo_de_medio</code></strong>: Puede ser <code>all</code> (todos los dispositivos), <code>screen</code> (pantallas), <code>print</code> (impresoras), entre otros.</p>
+</li>
+<li>
+<p><strong><code>condición</code></strong>: Define las características del dispositivo, como el ancho de la pantalla, la resolución, la orientación, etc.</p>
+</li>
+</ul>
+<h3 id="tipo_de_medio"><code>tipo_de_medio</code></h3>
+<p>Las consultas de medios son un aspecto crucial del diseño web receptivo, permitiendo a los desarrolladores aplicar estilos según las características del dispositivo o medio que muestra el contenido. Hay varios tipos de medios que se pueden seleccionar mediante consultas de medios, siendo tres de los principales <code>all</code>, <code>screen</code> y <code>print</code>.</p>
+<h4 id="1-all">1. <code>all</code></h4>
+<p>El tipo de medio <code>all</code> es el valor predeterminado para las consultas de medios. Los estilos definidos dentro de las consultas de medios <code>all</code> se aplican a todos los dispositivos y medios, independientemente de sus características. Este tipo se utiliza comúnmente cuando se desea aplicar un estilo de manera universal, sin importar el medio de salida.</p>
+<p>Ejemplo:</p>
+<pre><code class="language-css"><span class="hljs-keyword">@media</span> all <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">600px</span>) {
+  <span class="hljs-comment">/* Estilos para dispositivos con un ancho máximo de 600 píxeles */</span>
+  <span class="hljs-selector-tag">body</span> {
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">14px</span>;
+  }
+}
+</code></pre>
+<h4 id="2-screen">2. <code>screen</code></h4>
+<p>El tipo de medio <code>screen</code> se utiliza para dirigirse a dispositivos con pantalla, como computadoras, tabletas y teléfonos inteligentes. Los estilos especificados dentro de las consultas de medios <code>screen</code> se aplican cuando el contenido se muestra en una pantalla.</p>
+<p>Ejemplo:</p>
+<pre><code class="language-css"><span class="hljs-keyword">@media</span> screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">768px</span>) {
+  <span class="hljs-comment">/* Estilos para pantallas con un ancho mínimo de 768 píxeles */</span>
+  <span class="hljs-selector-class">.container</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">80%</span>;
+  }
+}
+</code></pre>
+<h4 id="3-print">3. <code>print</code></h4>
+<p>El tipo de medio <code>print</code> está diseñado para estilos que deben aplicarse cuando el contenido se está imprimiendo. Esto es particularmente útil para crear versiones amigables para imprimir de páginas web, ajustando diseños, colores y otros aspectos para una impresión óptima.</p>
+<p>Ejemplo:</p>
+<pre><code class="language-css"><span class="hljs-keyword">@media</span> print {
+  <span class="hljs-comment">/* Estilos para cuando el contenido se está imprimiendo */</span>
+  <span class="hljs-selector-class">.hide-on-print</span> {
+    <span class="hljs-attribute">display</span>: none;
+  }
+
+  <span class="hljs-comment">/* Ajustes para documentos impresos */</span>
+  <span class="hljs-selector-tag">body</span> {
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">12pt</span>;
+    interlineado: <span class="hljs-number">1.5</span>;
+  }
+}
+</code></pre>
+<p>En resumen, las consultas de medios proporcionan una forma poderosa de ajustar estilos según las características del medio de salida, y comprender las diferencias entre los tipos de medios <code>all</code>, <code>screen</code> y <code>print</code> es esencial para un diseño web receptivo efectivo.</p>
+<h2 id="ejemplos-básicos">Ejemplos básicos</h2>
+<h3 id="cambiar-estilos-para-pantallas-pequeñas">Cambiar estilos para pantallas pequeñas</h3>
+<pre><code class="language-css"><span class="hljs-keyword">@media</span> screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">768px</span>) {
+  <span class="hljs-selector-tag">body</span> {
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">16px</span>;
+  }
+}
+</code></pre>
+<p>En este ejemplo, se cambia el tamaño de fuente del cuerpo cuando la pantalla es de 768 píxeles o menos de ancho.</p>
+<h3 id="estilos-específicos-para-impresión">Estilos específicos para impresión</h3>
+<pre><code class="language-css"><span class="hljs-keyword">@media</span> print {
+  <span class="hljs-selector-tag">body</span> {
+    <span class="hljs-attribute">color</span>: black;
+  }
+}
+</code></pre>
+<p>Aquí, se especifican estilos específicos para cuando la página se imprime.</p>
+<h3 id="orientación-del-dispositivo">Orientación del dispositivo</h3>
+<pre><code class="language-css"><span class="hljs-keyword">@media</span> screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">orientation</span>: landscape) {
+  <span class="hljs-comment">/* Estilos para pantallas en orientación horizontal */</span>
+}
+
+<span class="hljs-keyword">@media</span> screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">orientation</span>: portrait) {
+  <span class="hljs-comment">/* Estilos para pantallas en orientación vertical */</span>
+}
+</code></pre>
+<p>Se pueden aplicar estilos diferentes según la orientación del dispositivo.</p>
+<h2 id="breakpoints">Breakpoints</h2>
+<p>En el contexto de las CSS media queries, los <code>breakpoints</code> se refieren a los puntos específicos o rangos de ancho de pantalla en los que se aplican cambios en el diseño o estilos de un sitio web para adaptarse a diferentes tamaños de dispositivos. Estos puntos de ruptura son esenciales para crear un diseño web receptivo y garantizar que la experiencia del usuario sea óptima en una variedad de dispositivos, desde teléfonos móviles hasta computadoras de escritorio.</p>
+<h3 id="ejemplos-de-breakpoints-en-media-queries">Ejemplos de Breakpoints en Media Queries</h3>
+<ol>
+<li>
+<p><strong>Cambio de estilos para pantallas pequeñas:</strong></p>
+<p>En este ejemplo, se utiliza un breakpoint para cambiar el tamaño de fuente del cuerpo cuando la pantalla es de 768 píxeles o menos de ancho.</p>
+<pre><code class="language-css"><span class="hljs-keyword">@media</span> screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">768px</span>) {
+  <span class="hljs-selector-tag">body</span> {
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">16px</span>;
+  }
+}
+</code></pre>
+</li>
+<li>
+<p><strong>Ajuste de diseño para tabletas:</strong></p>
+<p>Aquí, se usa un breakpoint para ajustar el ancho de un contenedor cuando la pantalla es de al menos 768 píxeles de ancho, lo que podría ser típico de tabletas.</p>
+<pre><code class="language-css"><span class="hljs-keyword">@media</span> screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">768px</span>) {
+  <span class="hljs-selector-class">.container</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">80%</span>;
+  }
+}
+</code></pre>
+</li>
+<li>
+<p><strong>Estilos específicos para impresión en dispositivos grandes:</strong></p>
+<p>En este caso, se aplica un estilo específico para la impresión cuando la pantalla es lo suficientemente grande (por ejemplo, una impresora de escritorio).</p>
+<pre><code class="language-css"><span class="hljs-keyword">@media</span> print <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">1200px</span>) {
+  <span class="hljs-selector-tag">body</span> {
+    <span class="hljs-attribute">color</span>: black;
+  }
+}
+</code></pre>
+</li>
+</ol>
+<p>Estos son solo ejemplos básicos. Los breakpoints pueden variar según los requisitos del diseño y la estructura del sitio web. Se eligen puntos de ruptura estratégicos para garantizar una transición fluida y una experiencia de usuario óptima en diferentes dispositivos.</p>
+<h3 id="breakpoints-populares">Breakpoints populares</h3>
+<p>Aquí tienes una explicación de los breakpoints más populares utilizados por la mayoría de frameworks de css y adaptados a los tamaños más populares:</p>
+<ol>
+<li>
+<p><strong><code>sm</code> (Small):</strong></p>
+<ul>
+<li><code>@media screen and (min-width: 568px)</code>: Este breakpoint se activa cuando el ancho de la pantalla es igual o superior a 568 píxeles. Es comúnmente utilizado para aplicar estilos específicos a pantallas pequeñas, como las de dispositivos móviles.</li>
+</ul>
+</li>
+<li>
+<p><strong><code>md</code> (Medium):</strong></p>
+<ul>
+<li><code>@media screen and (min-width: 768px)</code>: Este breakpoint se activa cuando el ancho de la pantalla es igual o superior a 768 píxeles. Suele ser utilizado para estilos destinados a tabletas y dispositivos con pantallas de tamaño mediano.</li>
+</ul>
+</li>
+<li>
+<p><strong><code>lg</code> (Large):</strong></p>
+<ul>
+<li><code>@media screen and (min-width: 1024px)</code>: Este breakpoint se activa cuando el ancho de la pantalla es igual o superior a 1024 píxeles. Se utiliza para aplicar estilos a pantallas de tamaño grande, como las de laptops y monitores de escritorio.</li>
+</ul>
+</li>
+<li>
+<p><strong><code>xl</code> (Extra Large):</strong></p>
+<ul>
+<li><code>@media screen and (min-width: 1280px)</code>: Se activa cuando el ancho de la pantalla es igual o superior a 1280 píxeles. Este breakpoint es ideal para adaptar el diseño a pantallas más grandes, como monitores de escritorio de alta resolución.</li>
+</ul>
+</li>
+<li>
+<p><strong><code>xxl</code> (Double Extra Large):</strong></p>
+<ul>
+<li><code>@media screen and (min-width: 1920px)</code>: Se activa cuando el ancho de la pantalla es igual o superior a 1920 píxeles. Este breakpoint se centra en pantallas de gran tamaño, como monitores de alta definición.</li>
+</ul>
+</li>
+<li>
+<p><strong><code>xxxl</code> (Triple Extra Large):</strong></p>
+<ul>
+<li><code>@media screen and (min-width: 2560px)</code>: Se activa cuando el ancho de la pantalla es igual o superior a 2560 píxeles. Este breakpoint se utiliza para pantallas de muy alta resolución.</li>
+</ul>
+</li>
+<li>
+<p><strong><code>x4k</code> (4K):</strong></p>
+<ul>
+<li><code>@media screen and (min-width: 3840px)</code>: Se activa cuando el ancho de la pantalla es igual o superior a 3840 píxeles. Este breakpoint está diseñado para adaptarse a pantallas 4K de ultra alta definición.</li>
+</ul>
+</li>
+</ol>
+<p>Estos breakpoints proporcionan puntos clave para adaptar el diseño y mejorar la experiencia del usuario en una variedad de dispositivos con diferentes tamaños de pantalla, expresados ahora en unidades de píxeles.</p>
+<h2 id="otros-ejemplos-de-media-queries-menos-utilizados">Otros ejemplos de media queries menos utilizados</h2>
+<p>Aquí tienes una lista de algunas media features comunes que puedes utilizar en consultas de medios CSS. Ten en cuenta que la compatibilidad puede variar según el navegador y la versión, así que es importante verificar la compatibilidad antes de utilizar algunas de estas características más avanzadas:</p>
+<ol>
+<li>
+<p><strong>Ancho de la Pantalla (<code>width</code>):</strong></p>
+<ul>
+<li>Ejemplo: <code>@media screen and (min-width: 768px) { ... }</code></li>
+<li>Explicación: Se activa cuando el ancho de la pantalla es igual o superior a 768 píxeles.</li>
+</ul>
+</li>
+<li>
+<p><strong>Altura de la Pantalla (<code>height</code>):</strong></p>
+<ul>
+<li>Ejemplo: <code>@media screen and (max-height: 600px) { ... }</code></li>
+<li>Explicación: Se activa cuando la altura de la pantalla es igual o inferior a 600 píxeles.</li>
+</ul>
+</li>
+<li>
+<p><strong>Orientación (<code>orientation</code>):</strong></p>
+<ul>
+<li>Ejemplo: <code>@media screen and (orientation: landscape) { ... }</code></li>
+<li>Explicación: Se activa cuando la pantalla está en orientación horizontal.</li>
+</ul>
+</li>
+<li>
+<p><strong>Resolución de Pantalla (<code>resolution</code>):</strong></p>
+<ul>
+<li>Ejemplo: <code>@media screen and (min-resolution: 300dpi) { ... }</code></li>
+<li>Explicación: Se activa cuando la resolución de la pantalla es igual o superior a 300 píxeles por pulgada (dpi).</li>
+</ul>
+</li>
+<li>
+<p><strong>Relación de Aspecto (<code>aspect-ratio</code>):</strong></p>
+<ul>
+<li>Ejemplo: <code>@media screen and (aspect-ratio: 16/9) { ... }</code></li>
+<li>Explicación: Se activa cuando la relación de aspecto de la pantalla es de 16:9.</li>
+</ul>
+</li>
+<li>
+<p><strong>Relación de Píxeles (<code>device-pixel-ratio</code>):</strong></p>
+<ul>
+<li>Ejemplo: <code>@media screen and (min--moz-device-pixel-ratio: 2) { ... }</code></li>
+<li>Explicación: Se activa cuando la relación de píxeles del dispositivo es igual o superior a 2. Útil para pantallas de alta densidad de píxeles (Retina, por ejemplo).</li>
+</ul>
+</li>
+<li>
+<p><strong>Tipo de Dispositivo (<code>device-type</code>):</strong></p>
+<ul>
+<li>Ejemplo: <code>@media screen and (device-type: handheld) { ... }</code></li>
+<li>Explicación: Se activa cuando el dispositivo es de mano (handheld), indicando generalmente un dispositivo móvil como un teléfono o una tableta.</li>
+</ul>
+</li>
+<li>
+<p><strong>Pantallas en Color (<code>color</code>):</strong></p>
+<ul>
+<li>Ejemplo: <code>@media screen and (min-color: 256) { ... }</code></li>
+<li>Explicación: Se activa cuando la pantalla es capaz de mostrar al menos 256 colores.</li>
+</ul>
+</li>
+<li>
+<p><strong>Pantallas en Blanco y Negro (<code>color-index</code>):</strong></p>
+<ul>
+<li>Ejemplo: <code>@media screen and (min-color-index: 256) { ... }</code></li>
+<li>Explicación: Se activa cuando la pantalla puede mostrar al menos 256 niveles de escala de grises.</li>
+</ul>
+</li>
+<li>
+<p><strong>Grid (<code>grid</code>):</strong></p>
+<ul>
+<li>Ejemplo: <code>@media (display: grid) { ... }</code></li>
+<li>Explicación: Se activa cuando el navegador admite el modelo de diseño de cuadrícula.</li>
+</ul>
+</li>
+<li>
+<p><strong>Nivel de Gris (<code>monochrome</code>):</strong></p>
+<ul>
+<li>Ejemplo: <code>@media screen and (min-monochrome: 2) { ... }</code></li>
+<li>Explicación: Se activa cuando la pantalla es capaz de mostrar al menos 2 niveles de grises.</li>
+</ul>
+</li>
+</ol>
+<p>Estas son solo algunas de las características que puedes utilizar en consultas de medios. La variedad de media features permite una adaptación fina y precisa del diseño de la página según las capacidades y características del dispositivo o del entorno de visualización.</p>
+<h1 id="ejemplos-de-la-utilización-de-media-queries">Ejemplos de la utilización de media queries</h1>
+<h2 id="ejemplo-de-navbar-que-muestra-menú-hamburguesa-o-menú-completo">Ejemplo de navbar que muestra menú hamburguesa o menú completo</h2>
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="qBgjmPZ" data-user="Justo-Garc-a-de-Paredes-Haba" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/Justo-Garc-a-de-Paredes-Haba/pen/qBgjmPZ">
+  UT4.9</a> by Justo García de Paredes Haba (<a href="https://codepen.io/Justo-Garc-a-de-Paredes-Haba">@Justo-Garc-a-de-Paredes-Haba</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<h2 id="ejemplo-de-cambio-de-animación-con-resolución">Ejemplo de cambio de animación con resolución</h2>
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="LYqLyQR" data-user="Justo-Garc-a-de-Paredes-Haba" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/Justo-Garc-a-de-Paredes-Haba/pen/LYqLyQR">
+  UT4.10</a> by Justo García de Paredes Haba (<a href="https://codepen.io/Justo-Garc-a-de-Paredes-Haba">@Justo-Garc-a-de-Paredes-Haba</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<h2 id="ejemplo-de-cambio-de-organización-en-la-página">Ejemplo de cambio de organización en la página</h2>
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="pJjjKj" data-user="SitePoint" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/SitePoint/pen/pJjjKj">
+  Typical Media Query example</a> by SitePoint (<a href="https://codepen.io/SitePoint">@SitePoint</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<h2 id="ejemplo-de-cambio-de-estructura-de-producto">Ejemplo de cambio de estructura de producto</h2>
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="KKxbrMw" data-user="augusto404" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/augusto404/pen/KKxbrMw">
+  página de produto (mobile first + media queries)</a> by alpaca (<a href="https://codepen.io/augusto404">@augusto404</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<h2 id="ejemplo-de-cambio-en-página-de-restaurante">Ejemplo de cambio en página de restaurante</h2>
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="bGvVXep" data-user="cabosmanuel" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/cabosmanuel/pen/bGvVXep">
+  Grid Food</a> by Manuel Cabos (<a href="https://codepen.io/cabosmanuel">@cabosmanuel</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+        
+        
+    </body>
+    </html>
